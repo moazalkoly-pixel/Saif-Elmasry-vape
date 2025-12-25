@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saif Elmasry Vape Store</title>
+
+<style>
+* { box-sizing: border-box; }
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url("https://i.ibb.co/k62NH0HM/IMG-20251225-WA0000.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    color: white;
+    text-align: center;
+}
+
+/* ===== نافذة الترحيب ===== */
+#welcome-screen {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    animation: fadein 1s ease;
+}
+
+.glow-text {
+    background: linear-gradient(90deg, red, yellow, lime, cyan, blue, magenta);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 5s infinite linear;
+    display: inline-block;
+}
+
+.glow-text span {
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: white; /* الإيموجي ثابت */
+}
+
+#welcome-screen h1 { font-size: 32px; margin-bottom: 10px; }
+#welcome-screen h2 { font-size: 24px; color: #f0f0f0; }
+
+@keyframes fadeout {
+    0% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes glow {
+    0% {background-position: 0%;}
+    50% {background-position: 100%;}
+    100% {background-position: 0%;}
+}
+
+/* ===== العنوان ===== */
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    background: linear-gradient(90deg, red, yellow, lime, cyan, blue, magenta);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 5s infinite linear;
+}
+
+.header h1 span { -webkit-background-clip: unset; -webkit-text-fill-color: white; }
+.header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(90deg, red, yellow, lime, cyan, blue, magenta);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 5s infinite linear;
+}
+
+/* ===== شريط المنتجات العمودي (يمين) ===== */
+.products-right { display: flex; flex-direction: column; position: fixed; right: 0; top: 120px; gap: 12px; padding-right: 5px; }
+.products-right img { width: 70px; animation: float 4s ease-in-out infinite alternate; }
+
+/* ===== شريط المنتجات العمودي (يسار) ===== */
+.products-left { display: flex; flex-direction: column; position: fixed; left: 0; top: 120px; gap: 12px; padding-left: 5px; }
+.products-left img { width: 70px; animation: float 4s ease-in-out infinite alternate; }
+
+/* ===== مربع السوشيال ===== */
+.social-box {
+    background: rgba(0,0,0,0.55);
+    position: fixed;
+    top: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 300px;
+    border-radius: 16px;
+    padding: 8px;
+    text-align: center;
+}
+
+.social-box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-decoration: none;
+    color: white;
+    margin: 4px 0;
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 13px;
+    background: linear-gradient(90deg, red, yellow, lime, cyan, blue, magenta);
+    background-size: 300% 300%;
+    animation: glow 5s infinite linear;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-box a:active { transform: scale(1.2); box-shadow: 0 0 15px rgba(255,255,255,0.7); }
+.social-box img { width: 16px; }
+</style>
+</head>
+
+<body>
+
+<!-- نافذة الترحيب -->
+<div id="welcome-screen">
+    <h1 class="glow-text">سيف المصري يرحب بكم <span>❤️</span></h1>
+    <h2 class="glow-text">Saif Elmasry Welcomes You <span>❤️</span></h2>
+</div>
+
+<!-- العنوان -->
+<div class="header">
+    <h1><span>🚭💨</span> Saif Elmasry Vape Store</h1>
+    <h2>Stop Smoking Start Vaping</h2>
+</div>
+
+<!-- شريط المنتجات العمودي (يمين) -->
+<div class="products-right">
+    <img src="https://i.ibb.co/GfL9hPHC/TOKYO-SUPER-COOL-HONEY-PEACH.webp">
+    <img src="https://i.ibb.co/LXkQjFtL/Oxpassionsalt.webp">
+    <img src="https://i.ibb.co/PHZ47jQ/nasty-juice-blackcurrant-lemonade-wicked-haze-twt-lymwn-nasty-juice-lkln-fyb-stwr.webp">
+    <img src="https://i.ibb.co/bRYLTXXN/download.jpg">
+    <img src="https://i.ibb.co/210Yz3Rd/nasty-juice-super-cool-peach-ice-jws-swbr-kwl-khwkh-ays-premium-liquid-647-785x.webp">
+    <img src="https://i.ibb.co/SDCBd5Ph/Untitled-119-600x675.webp">
+    <img src="https://i.ibb.co/RGQvDysr/Untitled-32-600x675.webp">
+</div>
+
+<!-- شريط المنتجات العمودي (يسار) -->
+<div class="products-left">
+    <img src="https://i.ibb.co/nsRQLdYb/images.jpg">
+    <img src="https://i.ibb.co/nsRQLdYb/images.jpg">
+    <img src="https://i.ibb.co/xqSPtCzw/6b753fbc-ff8b-4951-b094-8753904fba46-1000x1000-Qhqs9k-OW9537yx-Cea-Nn4-XBFEruko-ZFHwht9jtd-BF.webp">
+    <img src="https://i.ibb.co/C3D2M39t/a9f42bb5-f826-45e4-a0dc-54ea543986a6-1000x909.webp">
+    <img src="https://i.ibb.co/Nd4LVRfd/Power-Black.webp">
+    <img src="https://i.ibb.co/Nd4LVRfd/Power-Black.webp">
+    <img src="https://i.ibb.co/3x0QPDg/download.jpg">
+</div>
+
+<!-- السوشيال -->
+<div class="social-box">
+    <a href="https://wa.me/201118608579" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"> واتساب</a>
+    <a href="https://www.tiktok.com/@saif.elmasry2" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png"> تيك توك</a>
+    <a href="https://www.instagram.com/saif_elmasry_" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"> إنستجرام</a>
+    <a href="https://youtube.com/@saifelmasryvape" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"> يوتيوب</a>
+    <a href="https://www.facebook.com/saif.elmasry.938063" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"> فيسبوك</a>
+    <a href="https://maps.app.goo.gl/xHZWFE6nEULL2Kt79" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/684/684908.png"> الموقع</a>
+</div>
+
+<script>
+// اختفاء نافذة الترحيب بعد 3 ثواني
+setTimeout(function() {
+    const screen = document.getElementById('welcome-screen');
+    screen.style.animation = "fadeout 1s forwards";
+    setTimeout(()=>{ screen.style.display = 'none'; }, 1000);
+}, 3000);
+</script>
+
+</body>
+</html>
+
